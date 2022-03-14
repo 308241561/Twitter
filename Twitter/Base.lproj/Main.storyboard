@@ -65,17 +65,8 @@
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="140"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx6-tH-x1t">
-                                            <rect key="frame" x="73" y="11" width="44.5" height="22"/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="22" id="08M-dj-7H8"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tweet content" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AR0-ty-zVz">
-                                            <rect key="frame" x="73" y="37" width="321" height="92"/>
+                                            <rect key="frame" x="73" y="37" width="321" height="62"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -87,15 +78,46 @@
                                                 <constraint firstAttribute="height" constant="65" id="Ph4-Nv-goj"/>
                                             </constraints>
                                         </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bx6-tH-x1t">
+                                            <rect key="frame" x="73" y="11" width="44.5" height="22"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="22" id="08M-dj-7H8"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Evs-to-mDu" userLabel="retweetButton">
+                                            <rect key="frame" x="334" y="109" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="30" id="rRd-Vf-ym9"/>
+                                                <constraint firstAttribute="width" constant="30" id="zJR-1e-x5D"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="retweet-icon"/>
+                                        </button>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jfZ-en-oJq" userLabel="favButton">
+                                            <rect key="frame" x="374" y="109" width="30" height="30"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="30" id="Q9V-Ks-YSE"/>
+                                                <constraint firstAttribute="height" constant="30" id="ZoB-Qx-B6s"/>
+                                            </constraints>
+                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                            <state key="normal" image="favor-icon"/>
+                                        </button>
                                     </subviews>
                                     <constraints>
+                                        <constraint firstItem="Evs-to-mDu" firstAttribute="top" secondItem="AR0-ty-zVz" secondAttribute="bottom" constant="10" id="0S3-O1-NMm"/>
                                         <constraint firstItem="AR0-ty-zVz" firstAttribute="trailing" secondItem="BGX-67-FXh" secondAttribute="trailingMargin" id="BjM-wX-rlG"/>
-                                        <constraint firstItem="AR0-ty-zVz" firstAttribute="bottom" secondItem="BGX-67-FXh" secondAttribute="bottomMargin" id="J7f-lT-fyd"/>
                                         <constraint firstItem="TYZ-P2-d0d" firstAttribute="top" secondItem="BGX-67-FXh" secondAttribute="top" id="Mb7-ew-Skk"/>
                                         <constraint firstItem="bx6-tH-x1t" firstAttribute="top" secondItem="BGX-67-FXh" secondAttribute="topMargin" id="Qgu-rs-J5G"/>
                                         <constraint firstItem="bx6-tH-x1t" firstAttribute="leading" secondItem="TYZ-P2-d0d" secondAttribute="trailing" constant="8" id="THB-og-S2A"/>
+                                        <constraint firstItem="jfZ-en-oJq" firstAttribute="top" secondItem="AR0-ty-zVz" secondAttribute="bottom" constant="10" id="Tdh-dq-ZtN"/>
+                                        <constraint firstItem="jfZ-en-oJq" firstAttribute="trailing" secondItem="BGX-67-FXh" secondAttribute="trailingMargin" constant="10" id="UFr-iw-JQJ"/>
                                         <constraint firstItem="AR0-ty-zVz" firstAttribute="leading" secondItem="TYZ-P2-d0d" secondAttribute="trailing" constant="8" id="Z1S-dh-MZf"/>
+                                        <constraint firstItem="jfZ-en-oJq" firstAttribute="leading" secondItem="Evs-to-mDu" secondAttribute="trailing" constant="10" id="gKd-G0-gIE"/>
                                         <constraint firstItem="TYZ-P2-d0d" firstAttribute="leading" secondItem="BGX-67-FXh" secondAttribute="leading" id="jZA-LL-gEu"/>
+                                        <constraint firstItem="jfZ-en-oJq" firstAttribute="bottom" secondItem="BGX-67-FXh" secondAttribute="bottomMargin" constant="10" id="oJA-7c-OHY"/>
                                         <constraint firstItem="AR0-ty-zVz" firstAttribute="top" secondItem="bx6-tH-x1t" secondAttribute="bottom" constant="4" id="sGY-Hx-OUI"/>
                                     </constraints>
                                 </tableViewCellContentView>
@@ -231,6 +253,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="favor-icon" width="30" height="30"/>
+        <image name="retweet-icon" width="30" height="30"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
